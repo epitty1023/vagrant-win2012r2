@@ -8,4 +8,4 @@ for more information on how to use vagrant go to = https://www.vagrantup.com/
 
 Enjoy!
 
-If you would like to add or contribute, fork the file. 
+If you would like to add or contribute, you are welcome to fork the files. 
