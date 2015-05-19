@@ -15,13 +15,4 @@ package { "notepadplusplus" :
   ensure => "latest"
 }
   
-# other packages
-package { "fiddler4" :
-  ensure => "latest"
-}
-  
-package { "tortoisesvn" :
-  ensure => "1.7.12" # this works!!
-}
-  
 # ... other packages here...
