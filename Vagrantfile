@@ -14,9 +14,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   vb.gui = true
   vb.customize ["modifyvm", :id, "--memory", 2048]
   vb.customize ["modifyvm", :id, "--cpus", "2"]
-  file_to_disk = './tmp/large_disk.vdi'
-  vb.customize ['createhd', '--filename', file_to_disk, '--size', 60 * 1024]
-  vb.customize ['storageattach', :id, '--storagectl', 'IDE Controller', '--port', 1, '--device', 0, '--type', 'hdd', '--medium', file_to_disk]
+  #file_to_disk = './tmp/large_disk.vdi'
+  #vb.customize ['createhd', '--filename', file_to_disk, '--size', 60 * 1024]
+  #vb.customize ['storageattach', :id, '--storagectl', 'IDE Controller', '--port', 1, '--device', 0, '--type', 'hdd', '--medium', file_to_disk]
   
 end
   
@@ -35,7 +35,7 @@ end
   config.vm.synced_folder "wwwroot", "c:\inetpub\wwwroot"
 
 # Provisioning Secondary Disk
-  config.vm.provision :shell, path: "scripts/formatDdisk.ps1"
+  #config.vm.provision :shell, path: "scripts/formatDdisk.ps1"
 
 # Installing Puppet:
   config.vm.provision :shell, path: "scripts/Install-Puppet.ps1"
